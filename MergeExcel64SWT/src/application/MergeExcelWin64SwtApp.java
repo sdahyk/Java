@@ -322,7 +322,9 @@ public class MergeExcelWin64SwtApp {
 						tableColumn_additional.setWidth(100);
 						tableColumn_additional.setText("第" + i + "列");
 					}
-					item.setText(i + 1, value2003[i]);
+					if(value2003[i] != null) {
+						item.setText(i + 1, value2003[i]);
+					}
 				}
 				rowCount++;
 			}
@@ -383,7 +385,9 @@ public class MergeExcelWin64SwtApp {
 							tableColumn_additional.setWidth(100);
 							tableColumn_additional.setText("第" + i + "列");
 						}
-						item.setText(i + 1, value2007[i]);
+						if (value2007[i] != null) {
+							item.setText(i + 1, value2007[i]);
+						}
 					}
 					rowCount++;
 				}
