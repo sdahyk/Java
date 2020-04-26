@@ -3,7 +3,7 @@ import java.util.Stack;
 public class Hanoi {
 
 	public static void main(String[] args) {
-		int disks = 5;
+		int disks = 4;
 		Stack<Integer> a = new Stack<Integer>();
 		Stack<Integer> b = new Stack<Integer>();
 		Stack<Integer> c = new Stack<Integer>();
@@ -14,31 +14,17 @@ public class Hanoi {
 
 	}
 
-	// 将aa上的num个盘子，借助bb，移动到cc上
+	/**
+	 * 将aa上的num个盘子，借助bb，移动到cc上
+	 * 
+	 * @param num	要移动的盘子数量
+	 * @param aa	代表初始柱上的盘子
+	 * @param bb	代表移动中利用的中间柱上的盘子
+	 * @param cc	代表目的柱上的盘子
+	 * @author hanyk
+	 */
 	public static void doHanoi(int num, Stack<Integer> aa, Stack<Integer> bb, Stack<Integer> cc) {
 		if (num == 1) {
-			cc.push(aa.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-		} else if (num == 2) {
-			bb.push(aa.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			cc.push(aa.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			cc.push(bb.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-		} else if (num == 3) {
-			cc.push(aa.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			bb.push(aa.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			bb.push(cc.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			cc.push(aa.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			aa.push(bb.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
-			cc.push(bb.pop());
-			System.out.println(aa.toString() + bb.toString() + cc.toString());
 			cc.push(aa.pop());
 			System.out.println(aa.toString() + bb.toString() + cc.toString());
 		} else {
