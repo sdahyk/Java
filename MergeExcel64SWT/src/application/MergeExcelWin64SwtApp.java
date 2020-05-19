@@ -317,10 +317,10 @@ public class MergeExcelWin64SwtApp {
 				TableItem item = new TableItem(tableData, SWT.NONE, rowCount);
 				item.setText(0, excelFile.getName());
 				for (int i = 0; i < cellNum2003; i++) {
-					if (i == tableData.getColumns().length - 1) {
+					if (i == tableData.getColumns().length-1) {
 						TableColumn tableColumn_additional = new TableColumn(tableData, SWT.NONE);
 						tableColumn_additional.setWidth(100);
-						tableColumn_additional.setText("第" + i + "列");
+						tableColumn_additional.setText("第" + (i+1) + "列");
 					}
 					if(value2003[i] != null) {
 						item.setText(i + 1, value2003[i]);
@@ -380,10 +380,10 @@ public class MergeExcelWin64SwtApp {
 					TableItem item = new TableItem(tableData, SWT.NONE, rowCount);
 					item.setText(0, excelFile.getName());
 					for (int i = 0; i < cellNum2007; i++) {
-						if (i == tableData.getColumns().length - 1) {
+						if (i == tableData.getColumns().length-1) {
 							TableColumn tableColumn_additional = new TableColumn(tableData, SWT.NONE);
 							tableColumn_additional.setWidth(100);
-							tableColumn_additional.setText("第" + i + "列");
+							tableColumn_additional.setText("第" + (i+1) + "列");
 						}
 						if (value2007[i] != null) {
 							item.setText(i + 1, value2007[i]);
